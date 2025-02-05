@@ -47,6 +47,9 @@ scrollbar-track {
     border-radius: 10px;
 }
 
+.main-section {
+    padding-top: 100px; /* Adjust as needed */
+}
 
 
 .blue{
@@ -153,6 +156,11 @@ h1 {
     color: #fff;
 }
 
+.card-img {
+ 
+    height: 85px;
+    max-width: 100px;   
+}
 
 .custom-button .icon i{
     color: white;
@@ -258,12 +266,13 @@ h1 {
 
 
 #partners .card-body {
-    height: 300px;
+    height: 180px;
+    /* width: 180px; */
 }
 
 #partners img {
 
-    max-height: 290px;
+    max-height: 150px;
 }
 
 .terms-conditions {
@@ -305,4 +314,108 @@ h1 {
 
 .dropdown-item:hover {
     background-color: #f8f9fa;
+}
+
+/* @media (max-width: 991px) { 
+    .navbar-collapse {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px; 
+    }
+
+    .navbar-nav .nav-link {
+        color: #2b3c6a !important;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-collapse.show {
+        position: relative;
+        background-color: white; 
+        padding: 10px;
+        width: 100%;
+        z-index: 1000;
+    }
+
+   
+    .content {
+        transition: margin-top 0.3s ease-in-out;
+    }
+} */
+
+/* General navbar styling */
+.navbar {
+    padding: 15px 20px; /* Add padding for proper spacing */
+}
+
+/* Fix logo size in desktop view */
+.navbar-brand img {
+    height: 60px; /* Adjust logo size */
+    width: auto;
+}
+
+/* Increase navbar link size and spacing */
+.navbar-nav .nav-link {
+    font-size: 18px; /* Increase font size */
+    font-weight: 500; /* Make it slightly bold */
+    padding: 10px 15px; /* Add padding for better spacing */
+}
+
+/* Increase hamburger icon size */
+.navbar-toggler {
+    font-size: 24px; /* Make it larger */
+    padding: 8px 12px; /* Increase touch area */
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Remove outline when clicked */
+    box-shadow: none;
+}
+
+/* Ensure navbar items are aligned properly */
+@media (max-width: 991px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Ensure logo and hamburger icon are in one line */
+    .navbar-brand {
+        flex-grow: 1; /* Allow logo to adjust width */
+    }
+
+    /* Fix logo size in mobile view */
+    .navbar-brand img {
+        height: 55px; /* Slightly smaller for mobile */
+        width: auto;
+    }
+
+    /* Navbar collapse background fix */
+    .navbar-collapse {
+        background-color: white; /* Set background color */
+        padding: 15px;
+        border-radius: 5px; /* Optional: Adds a slight border-radius */
+    }
+
+    /* Navbar links color */
+    .navbar-nav .nav-link {
+        font-size: 20px; /* Increase font size */
+        font-weight: 500;
+        padding: 10px;
+        color: #2b3c6a !important;
+    }
+
+    /* Navbar collapse when open */
+    .navbar-collapse.show {
+        position: relative;
+        background-color: white;
+        padding: 10px;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Smooth shifting effect for content below navbar */
+    .content {
+        transition: margin-top 0.3s ease-in-out;
+    }
 }
