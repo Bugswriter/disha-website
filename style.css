@@ -47,9 +47,6 @@ scrollbar-track {
     border-radius: 10px;
 }
 
-.main-section {
-    padding-top: 100px; /* Adjust as needed */
-}
 
 
 .blue{
@@ -105,6 +102,16 @@ h1 {
     margin: 0;
     font-size: 2em;
     font-family: 'Poppins';
+}
+
+@media (max-width: 768px) { /* Target mobile devices */
+    .metrics h3 {
+        font-size: 4.7rem; /* Reduce to 2/3 of 7rem */
+    }
+
+    .metrics p {
+        font-size: 1.33em; /* Reduce to 2/3 of 2em */
+    }
 }
 
 #about, #tnc {
@@ -316,90 +323,76 @@ h1 {
     background-color: #f8f9fa;
 }
 
-/* @media (max-width: 991px) { 
-    .navbar-collapse {
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px; 
-    }
-
-    .navbar-nav .nav-link {
-        color: #2b3c6a !important;
-    }
-}
-@media (max-width: 991px) {
-    .navbar-collapse.show {
-        position: relative;
-        background-color: white; 
-        padding: 10px;
-        width: 100%;
-        z-index: 1000;
-    }
-
-   
-    .content {
-        transition: margin-top 0.3s ease-in-out;
-    }
-} */
-
+/* General navbar styling */
 /* General navbar styling */
 .navbar {
-    padding: 15px 20px; /* Add padding for proper spacing */
+    padding: 15px 20px;
 }
 
-/* Fix logo size in desktop view */
+/* Fix logo size and alignment */
+.navbar-brand {
+    margin-right: auto !important; /* Push logo to the extreme left */
+}
+
 .navbar-brand img {
     height: 60px; /* Adjust logo size */
     width: auto;
 }
 
+/* Align navbar links to the extreme right */
+.navbar-collapse {
+    justify-content: flex-end; /* Push links to the right */
+}
+
 /* Increase navbar link size and spacing */
 .navbar-nav .nav-link {
-    font-size: 18px; /* Increase font size */
-    font-weight: 500; /* Make it slightly bold */
-    padding: 10px 15px; /* Add padding for better spacing */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
 }
 
 /* Increase hamburger icon size */
 .navbar-toggler {
-    font-size: 24px; /* Make it larger */
-    padding: 8px 12px; /* Increase touch area */
+    font-size: 24px;
+    padding: 8px 12px;
     border: none;
 }
 
 .navbar-toggler:focus {
-    outline: none; /* Remove outline when clicked */
+    outline: none;
     box-shadow: none;
 }
 
-/* Ensure navbar items are aligned properly */
+/* Ensure proper alignment in mobile view */
 @media (max-width: 991px) {
     .navbar {
         display: flex;
         align-items: center;
+        padding: 0px;
     }
 
     /* Ensure logo and hamburger icon are in one line */
     .navbar-brand {
-        flex-grow: 1; /* Allow logo to adjust width */
+        flex-grow: 1;
+        margin-right: 0; /* Ensure it does not shift */
     }
 
     /* Fix logo size in mobile view */
     .navbar-brand img {
-        height: 55px; /* Slightly smaller for mobile */
+        height: 75px;
         width: auto;
     }
 
     /* Navbar collapse background fix */
     .navbar-collapse {
-        background-color: white; /* Set background color */
+        background-color: white;
         padding: 15px;
-        border-radius: 5px; /* Optional: Adds a slight border-radius */
+        border-radius: 5px;
     }
 
     /* Navbar links color */
     .navbar-nav .nav-link {
-        font-size: 20px; /* Increase font size */
+        font-size: 16px;
         font-weight: 500;
         padding: 10px;
         color: #2b3c6a !important;
