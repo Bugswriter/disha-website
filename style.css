@@ -130,7 +130,9 @@ h1 {
     margin-right: 30px;
 }
 
-
+.fa-icon-color{
+    color: #f9c74f;
+}
 .highlight {
     color: #f9c74f;
 }
@@ -173,26 +175,45 @@ h1 {
     color: white;
 }
 
+/* Ensure padding is adjusted for smaller screens */
 .prizes-section {
-    background-blend-mode: screen;
-    padding: 40px;
+    padding: 20px; /* Reduce padding for mobile */
+    text-align: center; /* Center align everything */
 }
 
 .prizes-heading {
-    text-align: center;
-    font-weight: bold;
-    font-size: 3em;
+    font-size: 4em; /* Reduce font size for smaller screens */
 }
+
+/* Ensure image scales properly */
 .prizes-image {
-    max-width: 100%;
+    max-width: 90%; /* Reduce width slightly for better spacing */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center image */
 }
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .prizes-section {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .prizes-heading {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    .prizes-image {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+
 
 .carousel-inner {
     padding: 20px 20px 20px 20px;
 }
 
 .carousel-item img {
-    max-height: 400px; /* Adjust as needed */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -244,8 +265,17 @@ h1 {
     margin-bottom: 10px;
     color: #2b3c6a;
 }
+.card-container{
+    height: 250px;
+    width: 300px;
+}
+@media (max-width: 768px) {
+    .card-container{
+        max-height: 150px;
+        width: 150px;
+    }
+}
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .powered-container {
         flex-direction: column;
@@ -274,7 +304,6 @@ h1 {
 
 #partners .card-body {
     height: 180px;
-    /* width: 180px; */
 }
 
 #partners img {
@@ -323,13 +352,10 @@ h1 {
     background-color: #f8f9fa;
 }
 
-/* General navbar styling */
-/* General navbar styling */
 .navbar {
     padding: 15px 20px;
 }
 
-/* Fix logo size and alignment */
 .navbar-brand {
     margin-right: auto !important; /* Push logo to the extreme left */
 }
@@ -339,19 +365,16 @@ h1 {
     width: auto;
 }
 
-/* Align navbar links to the extreme right */
 .navbar-collapse {
     justify-content: flex-end; /* Push links to the right */
 }
 
-/* Increase navbar link size and spacing */
 .navbar-nav .nav-link {
     font-size: 18px;
     font-weight: 500;
     padding: 10px 15px;
 }
 
-/* Increase hamburger icon size */
 .navbar-toggler {
     font-size: 24px;
     padding: 8px 12px;
@@ -363,7 +386,6 @@ h1 {
     box-shadow: none;
 }
 
-/* Ensure proper alignment in mobile view */
 @media (max-width: 991px) {
     .navbar {
         display: flex;
@@ -371,26 +393,22 @@ h1 {
         padding: 0px;
     }
 
-    /* Ensure logo and hamburger icon are in one line */
     .navbar-brand {
         flex-grow: 1;
         margin-right: 0; /* Ensure it does not shift */
     }
 
-    /* Fix logo size in mobile view */
     .navbar-brand img {
         height: 75px;
         width: auto;
     }
 
-    /* Navbar collapse background fix */
     .navbar-collapse {
         background-color: white;
         padding: 15px;
         border-radius: 5px;
     }
 
-    /* Navbar links color */
     .navbar-nav .nav-link {
         font-size: 16px;
         font-weight: 500;
@@ -398,7 +416,6 @@ h1 {
         color: #2b3c6a !important;
     }
 
-    /* Navbar collapse when open */
     .navbar-collapse.show {
         position: relative;
         background-color: white;
@@ -407,7 +424,6 @@ h1 {
         z-index: 1000;
     }
 
-    /* Smooth shifting effect for content below navbar */
     .content {
         transition: margin-top 0.3s ease-in-out;
     }
