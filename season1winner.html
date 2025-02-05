@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
+    <title>Season 1 Winners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f5f7fa, #e4e9f0);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2b3c6a; /* The thumb color (scroll handle) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid #ffffff; /* Optional: Adds a border around the thumb for contrast */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Custom scrollbar for Firefox */
+scrollbar {
+    width: 14px;
+}
+
+scrollbar-thumb {
+    background-color: #2b3c6a;
+    border-radius: 10px;
+}
+
+scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+
+            position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh; /* Adjust height as needed */
+    overflow: auto; /* Enable scrolling when content overflows */
+        }
+
+        h1 {
+            color: #2b3c6a;
+        }
+        .back-button {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            padding: 10px 15px;
+            background-color: #2b3c6a;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 12px 24px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        .tab.active {
+            background-color: #2b3c6a;
+            color: white;
+        }
+        .tab:hover {
+            background-color: #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f8f8;
+            color: #d9534f;
+        }
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tab {
+                width: 80%;
+                margin-bottom: 5px;
+            }
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">Back</button>
+    <div class="container">
+        <h1>Season 1 <span style="color: #2b3c6a;">Winners</span></h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTable('electric', this)">Electric Two Wheeler</div>
+            <div class="tab" onclick="showTable('laptop', this)">Laptop</div>
+            <div class="tab" onclick="showTable('smartphone', this)">Smart Phone</div>
+            <div class="tab" onclick="showTable('smartwatch', this)">Smart Watch</div>
+        </div>
+        <div id="electric" class="table-container">
+            <table>
+                <tr><th>Student Name</th><th>School Name</th><th>Class</th><th>City</th></tr>
+                <tr><td>Ambuj Shukla</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Kushagar</td><td>Panchitirthi Public School</td><td>12</td><td>Rohtak</td></tr>
+                <tr><td>Prince Raj Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Sachin</td><td>Panchitirthi Public School</td><td>12</td><td>Rohtak</td></tr>
+                <tr><td>Saksham Sharma</td><td>Little Angels Public School</td><td>12</td><td>Dharamshala</td></tr>
+            </table>
+        </div>
+        <div id="laptop" class="table-container" style="display: none;">
+            <table>
+                <tr><th>Student Name</th><th>School Name</th><th>Class</th><th>City</th></tr>
+                <tr><td>Aditya Singh</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Deepak Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Privrata</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Salil Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Ajay Yadav</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Devashish</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Kajal</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Richard George</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Dhruv</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Saksham Sharma</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                
+            </table>
+        </div>
+        <div id="smartphone" class="table-container" style="display: none;">
+            <table>
+                <tr><th>Student Name</th><th>School Name</th><th>Class</th><th>City</th></tr>
+                <tr><td>Agam Kulshrestha</td><td>Jim Corbett School</td><td>12</td><td>Agra</td></tr>
+                <tr><td>Akshat Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Amiy Patel</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Ananya Shukla</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Ashutosh Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Ayush</td><td>Vishwabharti Inter College</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Divyanshi</td><td>Vishwabharti Inter College</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Kuldeep Singh</td><td>M.D. Jain Public School</td><td>12</td><td>Mathura</td></tr>
+                <tr><td>Nitesh Singh</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Princy Jaiswal</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Ravindra Awasthi</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Richa Bhardwaj</td><td>Vishwabharti Inter College</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Rinku</td><td>M.D. Jain Public School</td><td>12</td><td>Mathura</td></tr>
+                <tr><td>Rishabh Shukla</td><td>St. Mary School (Fridpur BRL)</td><td>12</td><td>Bareilly</td></tr>
+                <tr><td>Sachin Kumar</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Sakshi Mishra</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Sakshi Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Saloni Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Sanjesh Yadav</td><td>Vishwabharti Inter College</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Vijay</td><td>M.D. Jain Public School</td><td>12</td><td>Mathura</td></tr>
+                <tr><td>Aditi Sharma</td><td>New Sanskriti Convent Inter College</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Aditi Verma</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Aman Ray</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Anandi Tiwari</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Anushka Sharad</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Arpit Sharma</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Arush Vishkarma</td><td>St. Xavier School</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Aryan Porwal</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Ashika Jain</td><td>New Sanskriti Convent Inter College</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Ashiki Verma</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Deeksha Sharma</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Harshit Kumar</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Kanika Singh</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Khushi Sahu</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Mili Verma</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Pooja Rajpoot</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Priyanshu Pandey</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Satyam Mishra</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Sonia Chouhan</td><td>New Sanskriti Convent Inter College</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Tashifa Shamim</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Anirudh Sharma</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>
+                <tr><td>Ankit Sharma</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>
+                <tr><td>Deepak Kumar</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>
+                <tr><td>Palschin</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Palvi Devi</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Raghuvansh Sharma</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Sonam Atri</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Sunaina Chalotra</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Sushant Sharma</td><td>PJP Higher Secondary School Unnao</td><td>10</td><td>Unnao</td></tr>
+                <tr><td>Vishakha Mehra</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>                
+            </table>
+        </div>
+        <div id="smartwatch" class="table-container" style="display: none;">
+            <table>
+                <tr><th>Student Name</th><th>School Name</th><th>Class</th><th>City</th></tr>
+                <tr><td>Aishwarya Vajpayee</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Ankul Yadav</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Anshika</td><td>SGRR Talab</td><td>12</td><td>Dehradun</td></tr>
+                <tr><td>Archana Yadav</td><td>CPS Girls Inter College Hathras</td><td>12</td><td>Hathras</td></tr>
+                <tr><td>Deepak Singh</td><td>M.D. Jain Public School</td><td>12</td><td>Mathura</td></tr>
+                <tr><td>Devendra Pratap</td><td>M.D. Jain Public School</td><td>12</td><td>Mathura</td></tr>
+                <tr><td>Dipanshi</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Garima Singh</td><td>CPS Girls Inter College Hathras</td><td>12</td><td>Hathras</td></tr>
+                <tr><td>Gourav Kathuriya</td><td>PanchTirthi Public School</td><td>12</td><td>Rohtak</td></tr>
+                <tr><td>Isha Thakur</td><td>Little Angels Public School</td><td>12</td><td>Dharamshala</td></tr>
+                <tr><td>Jatin Lakhanpal</td><td>Little Angels Public School</td><td>12</td><td>Dharamshala</td></tr>
+                <tr><td>Krishna</td><td>Little Angels Public School</td><td>12</td><td>Dharamshala</td></tr>
+                <tr><td>Kshitij Singh</td><td>Mother's Touch Public School</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Mohini Chauhan</td><td>AVMD Institute</td><td>12</td><td>Agra</td></tr>
+                <tr><td>Nandini Pundhir</td><td>CPS Girls Inter College Hathras</td><td>12</td><td>Hathras</td></tr>
+                <tr><td>Nitin Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Nivesh Sankhy N</td><td>Little Angels Public School</td><td>12</td><td>Dharamshala</td></tr>
+                <tr><td>Rachit Ahuja</td><td>Bhawan Vidyalaya Sector 29</td><td>12</td><td>Chandigarh</td></tr>
+                <tr><td>Ravindra Awasthi</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Samriti</td><td>Little Angels Public School</td><td>12</td><td>Dharamshala</td></tr>
+                <tr><td>Shailvi Verma</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Shikha Yadav</td><td>CPS Girls Inter College Hathras</td><td>12</td><td>Hathras</td></tr>
+                <tr><td>Shivam Kumar</td><td>Vishwabharti Inter College</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Siddharth Yadav</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Sunaina</td><td>CPS Girls Inter College Hathras</td><td>12</td><td>Hathras</td></tr>
+                <tr><td>Sunaina Kamboj</td><td>SGRR Talab</td><td>12</td><td>Dehradun</td></tr>
+                <tr><td>Tamshi Siddiqui</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Tapasya Maheshwari</td><td>CPS Girls Inter College Hathras</td><td>12</td><td>Hathras</td></tr>
+                <tr><td>Vanshika Saxena</td><td>Vishwabharti Inter College</td><td>12</td><td>Aligarh</td></tr>
+                <tr><td>Vijay Bose</td><td>Sita Bal Vidya Mandir Inter College</td><td>12</td><td>Lucknow</td></tr>
+                <tr><td>Akash Chaurasia</td><td>Wendy Academy High School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Anand Singh</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Anant Singh Chauhan</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Annu Yadav</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Anshu Raj</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+                <tr><td>Anuj Gupta</td><td>Mount Litera Zee School</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Aparna Yadav</td><td>Chandra Sekhar Inter College</td><td>11</td><td>Unnao</td></tr>
+                <tr><td>Arav Agarwal</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Arpit Singh</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Arpit Verma</td><td>St. Xavier's School - 1</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Avikam Mishra</td><td>Jawahar Navodaya Vidyalaya</td><td>11</td><td>Jhansi</td></tr>
+                <tr><td>Ayush Sharma</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Bhavana Rajpoot</td><td>Chandra Sekhar Inter College</td><td>11</td><td>Unnao</td></tr>
+                <tr><td>Devid Kamal</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Dhruv Sharma</td><td>Wendy Academy High School</td><td>11</td><td>Kanpur</td></tr>
+                <tr><td>Hariom Shukla</td><td>New Sanskriti Convent Inter College</td><td>11</td><td>Jhansi</td></tr>
+    <tr><td>Harshit Yadav</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Harshvardhan Singh</td><td>New Sanskriti Convent Inter College</td><td>11</td><td>Jhansi</td></tr>
+    <tr><td>Jahnavi Bhalla</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Krish Chandravanshi</td><td>Mount Litera Zee School</td><td>11</td><td>Jhansi</td></tr>
+    <tr><td>Lakshya Dua</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Lavi Sharma</td><td>Wendy Academy High School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Muskan Ahirwar</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+    <tr><td>Prateek Tiwari</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Prince Baghel</td><td>Kids Valley School</td><td>11</td><td>Itawa</td></tr>
+    <tr><td>Priyanshi Upadhyay</td><td>Chandra Sekhar Inter College</td><td>11</td><td>Unnao</td></tr>
+    <tr><td>Riya Sharma</td><td>Chandra Sekhar Inter College</td><td>11</td><td>Unnao</td></tr>
+    <tr><td>Rocky Yadav</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Rudra Ratnam Vajpayi</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Shashi Dhanuk</td><td>Chandra Sekhar Inter College</td><td>11</td><td>Unnao</td></tr>
+    <tr><td>Shreya Verma</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Shrishti Mishra</td><td>New Sanskriti Convent Inter College</td><td>11</td><td>Jhansi</td></tr>
+    <tr><td>Shrishti Agarwal</td><td>Gulmohar Public School</td><td>11</td><td>Kanpur</td></tr>
+    <tr><td>Abdullah Ansari</td><td>Mount Litera Zee School</td><td>10</td><td>Jhansi</td></tr>
+    <tr><td>Akshay Pratap Singh</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>
+    <tr><td>Angel Verma</td><td>Scholar's Playveg Inter College</td><td>10</td><td>Kanpur</td></tr>
+    <tr><td>Anmol</td><td>Scholar's Playveg Inter College</td><td>10</td><td>Kanpur</td></tr>
+    <tr><td>Anshi Tiwari</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>
+    <tr><td>Anurag</td><td>New Sanskriti Convent Inter College</td><td>10</td><td>Jhansi</td></tr>
+    <tr><td>Vidisha</td><td>Scholar's Playveg Inter College</td><td>10</td><td>Kanpur</td></tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function showTable(id, element) {
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            var tables = document.querySelectorAll('.table-container');
+            tables.forEach(table => table.style.display = 'none');
+
+            document.getElementById(id).style.display = 'block';
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
