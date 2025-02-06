@@ -86,7 +86,7 @@
                 <img src="assets/side.png" alt="Illustration" class="img-fluid w-100" style="object-fit: cover;">
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center h-100 pt-5">
-                <div class="about-content text-center text-md-start pt-5" >
+                <div class="about-content text-center text-md-start pt-5 m-5 mt-0" >
                     <h1 class="h1 mb-3">About <span class="highlight">Disha</span></h1>
                     <p>Your Talent Deserves to Be Rewarded!</p>
                     <p style="text-align: justify;">
@@ -123,7 +123,7 @@
                 To Be Announced
             </button>
     </section>
-    <section class="prizes-section p-3">
+    <section class="prizes-section p-3 mt-5">
         <div class="row p-3">
             <h2 class="prizes-heading">Exciting Prizes <span class="blue">to Win</span></h2>
         </div>
@@ -131,15 +131,17 @@
             <img src="assets/prizes5.png" alt="Exciting Prizes" class="prizes-image">
         </div>
     </section>
-    <section class="prizes-section p-3">
+
+
+    <section class="prizes-section p-3 mt-5">
         <div class="row p-3">
             <h2 class="prizes-heading text-center" id="highlights">Previous Year <span class="blue">Highlights</span></h2>
         </div>
         <div class="row justify-content-center">
             <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" style="background-color: #2b3c6a;"></button>
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"style="background-color: #2b3c6a;"></button>
                 </div>
                     <div class="carousel-inner p-3">
                     <div class="carousel-item active">
@@ -168,34 +170,77 @@
             </div>
         </div>
     </section>
-    <section class="powered-section" id="partnersection">
-        <div class="powered-container">
+
+
+    <div class="m-5" mb-2>
+        <center><h3 class="poweredbyHeading">Powered By</h3></center>
+        <section class="powered-section mt-0 pt-0">
+            <div class="powered-container" id="partnersection">
+                <br>
+                <div class="powered-header mt-0">
+                    <!-- University Logos Row -->
+                    <div class="row mb-4 g-4">  <!-- 'g-4' adds gap between columns -->
+                        <div class="col-md-6">
+                            <img class="logo-itemGG" src="assets/three.png" alt="Galgotias University" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="logo-itemGG" src="assets/four.png" alt="ICFAI University" style="width: 100%; height: auto;">
+                        </div>
+                    </div>
+            
+                    <!-- Partners Logos Row -->
+                    <div class="row g-5">  <!-- 'g-4' adds gap between columns -->
+                        <div class="col-md-6 mb-4">
+                            <center><h3>Coaching Partner</h3></center>
+                            <img class="logo-itemGG" src="assets/one(1).png" alt="Dreamers Eduhub" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <center><h3>Defense Partner</h3></center>
+                            <img class="logo-itemGG" src="assets/two.png" alt="Scholars Den" style="width: 100%; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+    </div>
+    
+
+    <!-- <div class="m-5">
+        <center><h3 class="poweredbyHeading">Powered By</h3></center>
+        <section class="powered-section mt-0 pt-0">
+        <div class="powered-container" id="partnersection">
+            <br>
             <div class="powered-header mt-0">
                 <div class="powered-logos partner p-0">
                     <center>
-                        <h3>Powered By</h3>
                         <div class=" align-center">
                             <img class="logo-itemGG" src="assets/three.png" alt="Galgotias University">
                             &nbsp;&nbsp;&nbsp;&nbsp;<img class="logo-itemGG" src="assets/four.png" alt="ICFAI University">
                         </div>
                     </center>
                 </div>
-                <div class="vertical-divider"></div>
-                <div class="partner">
-                    <h3>Coaching Partner</h3>
-                    <div class="logo-item">
-                        <img src="assets/one(1).png" alt="Dreamers Eduhub">
-                    </div>
-                </div>
-                <div class="partner">
-                    <h3>Defense Partner</h3>
-                    <div class="logo-item">
-                        <img src="assets/two.png" alt="Scholars Den">
-                    </div>
-                </div>
+                 <div>
+                     <div class="partner">
+                         <h3>Coaching Partner</h3>
+                         <div class="logo-item">
+                             <img src="assets/one(1).png" alt="Dreamers Eduhub">
+                         </div>
+                     </div>
+                     <div class="partner">
+                         <h3>Defense Partner</h3>
+                         <div class="logo-item">
+                             <img src="assets/two.png" alt="Scholars Den">
+                         </div>
+                     </div>
+
+                 </div>
             </div>
         </div>
-    </section>
+        </section>
+
+    </div> -->
     <section id="partners" class="partners py-5 bgcolor">
     <div class="container">
         <div class="row">
@@ -299,7 +344,7 @@
             <div class="col-6 col-md-3">
                 <div class="card border-0">
                     <div class="card-body d-flex justify-content-center align-items-center">
-                        <img class="card-img" src="assets/five.png" alt="University 5" class="img-fluid">
+                        <img class="card-img makeitsmall" src="assets/five.png" alt="University 5" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -322,7 +367,7 @@
             <div class="col-6 col-md-3">
                 <div class="card border-0">
                     <div class="card-body d-flex justify-content-center align-items-center">
-                        <img class="card-img" src="assets/six(1).png" alt="University 2" class="img-fluid">
+                        <img class="card-img makeitsmall" src="assets/six(1).png" alt="University 2" class="img-fluid">
                     </div>
                 </div>
             </div>

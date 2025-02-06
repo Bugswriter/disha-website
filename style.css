@@ -83,8 +83,8 @@ h1 {
 #about, #tnc {
     background-color: #2b3c6a;
     color: #fff;
-    font-size: 1.2em;
-    line-height: 1.8em;
+    font-size: 1.5em;
+    line-height: 2em;
 }
 
 .custom-button {
@@ -140,32 +140,31 @@ h1 {
 }
 
 .powered-container {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 .powered-header {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 30px;
     color: #2b3c6a;
 }
 
-.powered-logos {
-    display: flex;
-    gap: 20px;
-}
 
 .logo-item img {
     max-width: 150px;
     height: auto;
 }
 
+
+
 .logo-itemGG{
-    max-width: 250px;
+    max-width: 450px;
     height: auto;
+    padding: 0px 50px;
 }
 
 .vertical-divider {
@@ -292,15 +291,20 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
-
+.makeitsmall{
+    width: 150px;
+}
 .card-img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain; /* Ensures images fit properly without distortion */
 }
-
+.poweredbyHeading{
+    color: #2b3c6a;
+    font-size: 50px;
+}
 /* Responsive Styling */
 @media (max-width: 768px) {  /* Tablets & small devices */
     .card-box, .col-6, .col-md-3 {
@@ -315,3 +319,5 @@ h1 {
         height: auto;
     }
 }
+
+
